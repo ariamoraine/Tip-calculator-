@@ -17,8 +17,8 @@ public final class R {
     public static final class id {
         public static final int billAmount=0x7f060000;
         public static final int fifteenButton=0x7f060005;
-        public static final int textView1=0x7f060007;
-        public static final int textView2=0x7f060006;
+        public static final int textView1=0x7f060006;
+        public static final int textView2=0x7f060007;
         public static final int tipamount=0x7f060003;
         public static final int totalText=0x7f060004;
         public static final int twentyButton=0x7f060001;

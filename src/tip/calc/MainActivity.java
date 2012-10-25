@@ -1,5 +1,7 @@
 package tip.calc;
 
+import java.text.DecimalFormat;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
@@ -36,7 +38,9 @@ public class MainActivity extends Activity implements OnClickListener{
         totalAmountText = (TextView)findViewById(R.id.totalText);
     }
     
+
     public void onClick (View view) {
+    	
     	switch (view.getId()){
     	
     	case R.id.fifteenButton:
@@ -47,8 +51,9 @@ public class MainActivity extends Activity implements OnClickListener{
     		else{
 			billValue = Double.parseDouble(text.getText().toString());
     		fifteenPre(billValue);
+    		DecimalFormat tipAmountDecimal = new DecimalFormat("#.##");
     		totalAmountText.setText(String.valueOf(" " + totalAmount));
-    		tipAmountText.setText(String.valueOf(" " + tipAmount));
+    		tipAmountText.setText(String.valueOf(" " + tipAmountDecimal.format(tipAmount)));
     		}
     	break;
     	
@@ -59,8 +64,9 @@ public class MainActivity extends Activity implements OnClickListener{
     		else{
     		billValue = Double.parseDouble(text.getText().toString());
     		twentyPre(billValue);
+    		DecimalFormat tipAmountDecimal = new DecimalFormat("#.##");
     		totalAmountText.setText(String.valueOf(" " + totalAmount));
-    		tipAmountText.setText(String.valueOf(" " + tipAmount));
+    		tipAmountText.setText(String.valueOf(" " + tipAmountDecimal.format(tipAmount)));
     		}
     	break;
     	
@@ -71,8 +77,9 @@ public class MainActivity extends Activity implements OnClickListener{
     		else{
     		billValue = Double.parseDouble(text.getText().toString());
     		twentyfivePre(billValue);
+    		DecimalFormat tipAmountDecimal = new DecimalFormat("#.##");
     		totalAmountText.setText(String.valueOf(" " + totalAmount));
-    		tipAmountText.setText(String.valueOf(" " + tipAmount));
+    		tipAmountText.setText(String.valueOf(" " + tipAmountDecimal.format(tipAmount)));
     		}
     	break;
     	
@@ -83,7 +90,7 @@ public class MainActivity extends Activity implements OnClickListener{
     public void fifteenPre (double billAmount){
     	tipAmount = billAmount * 0.15;
 		totalAmount = billAmount + tipAmount;
-	}
+    }
 	
 	public void twentyPre (double billAmount){
 		tipAmount = billAmount * 0.20;
