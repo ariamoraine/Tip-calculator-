@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">Tip Calc</string>
+    <string name="title_activity_main">Tip Calc</string>
+    <string name="fifteen">15%</string>
+    <string name="twentyfive">25%</string>
+    <string name="twenty">20%</string>
+    <string name="tipstring">Tip: </string>
+    <string name="totalstring">Total: </string>
+
+</resources>
